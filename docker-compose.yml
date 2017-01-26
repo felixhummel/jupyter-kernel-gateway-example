@@ -1,6 +1,15 @@
 version: '2.1'
 
 services:
+  nginx:
+    # front for the API, so we can set Access-Control-Allow-Origin (for swagger-ui)
+    image: nginx
+    ports:
+      - 8886:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    links:
+      - api
   notebook:
     image: jupyter/minimal-notebook
     env_file: .env
@@ -27,3 +36,9 @@ services:
       - 127.0.0.1:8889:8889
     volumes:
       - ./:/home/jovyan/work
+  swagger:
+    image: swaggerapi/swagger-ui
+    ports:
+      # if you change this, be sure to change it in nginx.conf too!
+      - 127.0.0.1:8887:8080
+

@@ -39,3 +39,9 @@ Testing the API
 
     curl -H "Content-Type: application/x-spam" 'localhost:8889/content-type'
 
+Check out swagger UI:
+
+- visit http://localhost:8887/
+- paste http://localhost:8886/_api/spec/swagger.json
+- Explore
+
