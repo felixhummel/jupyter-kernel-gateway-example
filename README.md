@@ -41,7 +41,7 @@ Testing the API
 
 Check out swagger UI:
 
-- visit http://localhost:8887/
-- paste http://localhost:8886/_api/spec/swagger.json
+- visit [http://localhost:8887/](http://localhost:8887/)
+- paste [http://localhost:8886/_api/spec/swagger.json](http://localhost:8886/_api/spec/swagger.json)
 - Explore
 
